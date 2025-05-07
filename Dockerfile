@@ -1,4 +1,4 @@
-FROM uqlibrary/alpine:3.20.6
+FROM alpine:3.21.3
 
 ENV COMPOSER_VERSION=2.8.8
 
@@ -12,6 +12,7 @@ RUN apk upgrade --update --no-cache && \
     git sqlite mysql-client libmemcached musl
 
 RUN apk add --update --no-cache \
+        bash inotify-tools wget curl python3 jq nano less groff py-pip xz aws-cli aws-cli-bash-completion \
         php82-session php82-soap php82-openssl php82-gmp php82-pdo_odbc php82-json php82-dom php82-pdo php82-zip \
         php82-mysqli php82-sqlite3 php82-pdo_pgsql php82-bcmath php82-gd php82-odbc php82-pdo_mysql php82-pdo_sqlite \
         php82-gettext php82-xmlreader php82-xmlwriter php82-xml php82-simplexml php82-bz2 php82-iconv php82-xsl php82-sodium \
