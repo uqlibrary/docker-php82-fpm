@@ -1,6 +1,6 @@
-FROM alpine:3.21.3
+FROM alpine:3.22.2
 
-ENV COMPOSER_VERSION=2.8.8
+ENV COMPOSER_VERSION=2.8.12
 
 COPY ./fs/docker-entrypoint.sh /usr/sbin/docker-entrypoint.sh
 
